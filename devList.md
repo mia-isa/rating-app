@@ -47,3 +47,9 @@ step 5
 - delete posts 
 - delete profile 
 - edit favourites/delete+add favourites
+
+step 6
+- search for game by name 
+- game page 
+- search for reviews by category 
+- what are users raving about?
