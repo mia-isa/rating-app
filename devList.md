@@ -6,8 +6,6 @@ password: ratingsite
 step 1 
 - create login/logout w/ session
     - username
-    - password
-    - email
     - reset password/verify email
   
 step 2 
