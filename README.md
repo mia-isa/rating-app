@@ -1,6 +1,7 @@
 # rating-app
 
 !!!! IMPORTANT !!!! update: 20230515
+
 hi everyone,
 i'm updating this here so that it will be seen by all viewers of the repository. 
 recently i've not been doing well mentally. i've been absent from my class quite a bit, so this whole project is essentially broken. 
