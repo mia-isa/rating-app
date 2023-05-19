@@ -1,4 +1,7 @@
-<?php include($_SERVER['DOCUMENT_ROOT'].'/functions.php') ?>
+<?php include ($_SERVER['DOCUMENT_ROOT'].'/functions.php');
+$jsonCats = file_get_contents("https://php-always-on.toddbenrud.repl.co/webDesign/reviewCRUD/itemData/item.json");
+$catData = json_decode($jsonCats, TRUE); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +13,9 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link href='/style.css' name="stylesheet">
 </head>
+  <nav>
+    <?php echo $nav; ?>
+  </nav>
 
 <body>
 	<section class="h-100">
@@ -22,7 +28,7 @@
 						<div class="card-body p-5">
 							<h1 class="fs-4 card-title fw-bold mb-4">Welcome back!</h1>
               
-<form action="/userSession/accessPoint.php" method="get" class="needs-validation" novalidate="" autocomplete="off" name="login">
+<form action="https://php-always-on.toddbenrud.repl.co/webDesign/reviewCRUD/accessPoint.php" method="post" class="needs-validation" novalidate="" autocomplete="off" name="login">
 	<div class="mb-3">
 		<label class="mb-2 text-muted" for="email">E-Mail Address</label>
 			<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
@@ -37,20 +43,18 @@
 			Forgot Password?
 		</a>
 	</div>
-  <input id="url" type="hidden" class="form-control" name="url" value="https://web-final-crud-webdesignghs2022-1.webdesignghs2022.repl.co" required autofocus>
+  <input id="url" type="hidden" class="form-control" name="url" value="https://web-final-crud-webdesignghs2022-1.webdesignghs2022.repl.co/index.php" required>
 		<div class="invalid-feedback">
 			Email is invalid
 	 </div>
-<input id="password" type="password" class="form-control" name="password" required>
+<input id="password" type="password" class="form-control" name="pword" required>
 	<div class="invalid-feedback">
 		Password is required
 	 </div>
 	</div>
 
 	 <div class="d-flex align-items-center">
-	<button name="btn_login" type="submit" class="btn btn-primary ms-auto">
-		Login
-	 </button>
+	 <input type="submit" value="Submit" name="BTN_login">
   </div>
 </form>
 				</div>
