@@ -5,13 +5,13 @@
 
 $nav = '<ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link" aria-current="page" href="/home.php">Home</a>
+    <a class="nav-link" aria-current="page" href="/newItem.php">Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" aria-current="page" href="/index.php">Login</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/userProfile/homeProfile.php">Your profile</a>
+    <a class="nav-link" href="#">Your profile</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
