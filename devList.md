@@ -1,12 +1,9 @@
 # rating-app todo list
 
-rating video-games
+rating stuff
 password: ratingsite
 
-step 1 
-- create login/logout w/ session
-    - username
-    - reset password/verify email
+step 1: complete!
   
 step 2 
 - create basic formatting for post
