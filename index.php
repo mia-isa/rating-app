@@ -14,7 +14,7 @@
     <?php echo $nav; ?>
   </head>
 
-    <title>Hello, world!</title>
+    <title>rate with isa! | Login</title>
   </head>
 
   <body>
@@ -45,21 +45,6 @@
 echo '<pre>'; 
 var_dump($_GET);
 echo '</pre>'; 
-
-function verifyLogin() {
-      $loggedIn = 'no';
-      if (isset($_SESSION['status']['uid'])) {
-        if (is_numeric($_SESSION['status']['uid']) && strlen($_SESSION['status']['uid']) == 3) {
-            $loggedIn = 'yes';
-        } // END:: if() numeric and 3 chars
-      }// END:: if() isset
-  
-      if ($loggedIn == 'no'){
-        session_unset();
-        die();
-      }// END:: if() redirect
-    
-  } // END:: FUNCTION
 
 verifyLogin();
       ?>
