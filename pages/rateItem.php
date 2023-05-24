@@ -30,7 +30,7 @@
     <div class="col">
     <?php
   foreach($itemsArray as $item){
-    // if ($item['uid'] == $_GET['uid']) {
+    if ($item['uid'] == $_GET['uid']) {
     echo $item['uid']."<br>";
     echo "<a href='/pages/rateItem.php?uid=".$item['uid']."'>".$item['name']."</a><br>";
     echo $item['description']."<br>";
@@ -40,7 +40,11 @@
     echo $item['creator']."<br>";
     echo $item['status']."<hr>";
 }
-// 
+  }
+
+// echo '<pre>';
+// var_dump($_SESSION['status']['uid']);
+// echo '</pre>';
 ?>
     </div>
   </div>
@@ -49,7 +53,7 @@
     <div class="col m-2">
       <h4>Rate an item!</h4><br>
 <form action="https://php-always-on.toddbenrud.repl.co/webDesign/reviewCRUD/accessPoint.php?reason=rateItem" method="post">
-  <input type="hidden" name="itemUID" value="">
+  <input type="hidden" name="itemUID" value="<?php echo $_GET['uid'];?>">
   <input type="hidden" name="userUID" value="<?php echo $_SESSION['status']['uid'];?>">
   <input type="hidden" name="url" value="https://web-final-crud-webdesignghs2022-1.webdesignghs2022.repl.co/pages/rateItem.php">
   <input type="hidden" name="hash" value="<?php echo $_SESSION['status']['hash'];?>">
