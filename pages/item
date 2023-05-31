@@ -33,7 +33,7 @@
   <label>What are you reviewing?</label><br>
   <input name="itemTitle"><br><br>
   <label>Place an image of your item here</label><br>
-  <input type="file" name="itemImage"><br><br>
+  <input name="itemImage"><br><br>
   <label>Give a description</label><br>
   <input type="textarea" name="itemDescription"><br><br>
   <label>Choose a category</label><br>
@@ -60,7 +60,11 @@
 <?php
   foreach($itemsArray as $item){
     echo $item['uid']."<br>";
+  if ($_SESSION['status']['uid'] == $item['creator']) {
+    echo "<a href='/pages/rateItem.php?uid=".$item['uid']."'>".$item['name']."</a>  | <a href='/pages/itemEdit.php?uid=".$item['uid']."'>Edit Item</a><br>";
+  } else {
     echo "<a href='/pages/rateItem.php?uid=".$item['uid']."'>".$item['name']."</a><br>";
+  }
     echo $item['description']."<br>";
     echo '<img src="' .$item['image_url'] . '" width="400px" height="400px">';
     echo "<br>";
